@@ -1,11 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
-import PostCard from '../../../components/PostCard';
+import { makeStyles } from '@material-ui/core/styles';
+
+import PostCard from '../../../components/PostCard/Index.js';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-
-  },
+  }
 }));
 
 const posts = [
@@ -38,17 +39,16 @@ const posts = [
     image: "images/posts/post8.jpeg"
   },
 
-
 ];
 
 function Feed() {
   const classes = useStyles();
 
   return (
-    <div classes={classes.root}>
+    <div className={classes.root}>
       {
         posts.map(post => (
-          <PostCard key={post.id} post={post} />
+          <PostCard key={posts.id} post={post} />
         ))
       }
     </div>
